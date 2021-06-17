@@ -1,0 +1,11 @@
+<h3>Pares</h3>
+
+<p>Números pares entre <%= x %> e <%= y %> :</p>
+
+<ul>
+    <% for(let i = x; i < y; i++){ %>
+        <% if (i % 2 == 0){ %>
+            <li><%= i %></li>
+        <% } %>
+    <% } %>
+</ul>

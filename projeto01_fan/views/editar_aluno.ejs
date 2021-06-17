@@ -1,0 +1,13 @@
+<h3>Editar Aluno</h3>
+
+<form action="/editar_aluno" method="post">
+    <input type="hidden" name="indice" value="<%= indice %>" />
+    Nome: <input type="text" name="nome" value="<%= aluno.nome %>" /><br/><br/>
+    Idade: <input type="text" name="idade" value="<%= aluno.idade %>" /><br/><br/>
+    Matrícula: <input type="text" name="matricula" value="<%= aluno.matricula %>" /><br/><br/>
+    <input type="submit" value="Atualizar" />
+</form>
+
+<p>
+    <a href="/formulario_buscar_aluno" >Voltar</a>
+</p>

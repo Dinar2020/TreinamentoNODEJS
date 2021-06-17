@@ -1,0 +1,30 @@
+<form action="/formulario_buscar_aluno" method="post">
+    Matrícula: <input type="text" name="matricula" />
+    <input type="submit" value="Pesquisar" />
+</form>
+
+<hr/>
+<p>
+    <a href="/adicionar_aluno" >Novo Aluno</a>
+</p>
+
+
+<table>
+    <tr>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td>Matrícula</td>
+        <td>Edição</td>
+        <td>Exclusão</td>
+    </tr>
+    <% alunos.forEach((aluno, indice) => { %>
+        <tr>
+            <td><%= aluno.nome %></td>
+            <td><%= aluno.idade %></td>
+            <td><%= aluno.matricula %></td> 
+            <td><a href="/editar_aluno/<%= indice %>" >Editar</a></td>
+            <td><a href="/excluir_aluno/<%= indice %>" >Excluir</a></td>
+        </tr>
+    <% }); %>
+
+</table>
